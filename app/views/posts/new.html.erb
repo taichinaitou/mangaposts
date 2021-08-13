@@ -1,5 +1,7 @@
 <% if logged_in? %>
   <%= form_with(model: @post) do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
+  
   <div class="mb-3">
     <%= f.label :title, 'タイトル' %>
     <%= f.text_field :title, class: 'form-control' %>
