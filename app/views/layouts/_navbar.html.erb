@@ -1,7 +1,7 @@
 <header class="mb-4">
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid ps-5 pe-5">
-      <a class="navbar-brand" href="/">おすすめマンガの会</a>
+      <a class="navbar-brand" href="/">おすすめマンガ</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -10,7 +10,7 @@
         <% if logged_in? %>
           <div class="btn-group">
             <ul class="navbar-nav">
-              <li class="ms-3"><%= link_to 'マイページ', users_path(current_user), class: 'nav-link' %></li>
+              <li class="ms-3"><%= link_to 'マイページ', user_path(current_user), class: 'nav-link' %></li>
               <li class="ms-3"><%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %></li>
             </ul>
           </div>

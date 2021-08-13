@@ -1,0 +1,14 @@
+<% if logged_in? %>
+  <%= form_with(model: @post) do |f| %>
+  <div class="mb-3">
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :content, 'おすすめのポイント' %>
+    <%= f.text_area :content, class: 'form-control',row:5 %>
+  </div>
+  
+  <%= f.submit '投稿' %>
+  <% end %>
+<% end %>

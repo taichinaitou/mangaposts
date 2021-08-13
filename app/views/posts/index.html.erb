@@ -1,7 +1,10 @@
-<h2><%= @user.name %></h2>
 <div class="text-center">
-  <h3>自分が投稿したマンガ一覧</h3>
+  <img src="/assets/main_book.jpg" alt="本の画像" width=100% height=400px>
+  <h3 class="mt-5">おすすめマンガ一覧</h3>
 </div>
+<% if logged_in? %>
+  <%= link_to "新規投稿", new_post_path %>
+<% end %>
 <div class="row">
   <% @posts.each do |post| %>
     <%= link_to post, class: 'col-sm-12' do %>
@@ -14,4 +17,9 @@
     <% end %>
   <% end %>
 </div>
+
 <%== pagy_bootstrap_nav(@pagy) %>
+
+<div class="text-center">
+  <small>&copy; Taichi Naitou</small>
+</div>

@@ -1,0 +1,11 @@
+<div class="card card-body container">
+  <div class="row">
+    <div class="col-8"><h1><%= @post.user.name %></h1></div>
+    <% if current_user == @post.user %>
+      <div class="col-2"><h5><%= link_to "編集",edit_post_path(@post) %></h5></div>
+      <div class="col-2"><h5><%= link_to "削除", @post, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></h5></div>
+    <% end %>
+  </div>
+  <h1><%= @post.title %></h1>
+  <h3><%= @post.content %></h3>
+</div>
